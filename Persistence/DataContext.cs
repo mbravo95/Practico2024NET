@@ -11,7 +11,7 @@ namespace Practico2024NET.Persistence
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase("pencaDb");
+            optionsBuilder.UseSqlServer(@"Server=LAPTOP-UL2OD4BV\SQLEXPRESS01;Database=practicoNET2024;Trusted_Connection=SSPI;Encrypt=False;");
         }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
